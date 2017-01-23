@@ -52,11 +52,7 @@
     End Function
     Sub initalise()
         'initialises the array with 5 values and sets the value of current size
-        names(0) = "Andrew"
-        names(1) = "Ben"
-        names(2) = "Cam"
-        names(3) = "Dave"
-        names(4) = "Ed"
+names = {"andrew", "ben", "cam", "dave", "ed"}
         currentsize = 5
     End Sub
     Function enqueueu(ByVal nametoadd) As String
@@ -104,7 +100,7 @@
                     enqueueu(nametoadd)
                 Case Is = "3"
                     'peek option
-                    For count = 1 To currentsize
+                            For count = 0 To currentsize - 1
                         Console.WriteLine(names(count))
                     Next
                     Console.ReadLine()
