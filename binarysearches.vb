@@ -8,6 +8,7 @@
     Function search(ByRef found As Boolean, ByVal names() As String, ByRef mid As Integer) As Boolean
         Dim low As Integer = 0
         Dim high As Integer = 4
+        'resets the value of found so the do loop actually works
         found = 0
         Do While low <= high
             mid = (high + low / 2)
@@ -35,12 +36,12 @@
         found = 0
         Do While low <= high
             mid = (high + low / 2)
-            If names(mid) = names(rnd) Then
+            If mid = rnd Then
                 found = True
                 Exit Do
-            ElseIf names(mid) > item Then
+                    ElseIf mid > random Then
                 high = mid - 1
-            ElseIf names(mid) < item Then
+                    ElseIf mid < random Then
                 low = mid
             End If
         Loop
